@@ -140,6 +140,10 @@ const pionerAuditRows = [
 
 export default function Home({ locale }) {
   const activeLocale = locale || 'en';
+  const resumeHref = activeLocale === 'ru'
+    ? '/Ilya-Ivanov-Resume-RU.pdf'
+    : '/Ilya-Ivanov-Resume-EN.pdf';
+  const resumeLabel = activeLocale === 'ru' ? 'Скачать резюме ↓' : 'Download CV ↓';
 
   const page = <main>
     <nav><a className="mark" href="#top">II<span>.</span></a><div><a href="#work">Проекты</a><a href="#about">Обо мне</a><a href="#skills">Компетенции</a><a href="#contact">Контакты</a><LanguageSwitcher locale={activeLocale} /></div></nav>
@@ -149,7 +153,7 @@ export default function Home({ locale }) {
         <div className="hero-content">
           <h1>Превращаю игровые механики <em>в целостный опыт</em></h1>
           <p className="hero-copy"><strong>Руководитель игрового дизайна.</strong> Бой, противники, прогрессия и первый пользовательский опыт — от концепции и игровых правил до рабочего билда.</p>
-          <div className="hero-actions"><a className="button primary" href="#work">Смотреть проекты</a><a className="button" href="#contact">Связаться ↘</a><span className="resume-status">Резюме — по запросу</span></div>
+          <div className="hero-actions"><a className="button primary" href="#work">Смотреть проекты</a><a className="button" href="#contact">Связаться ↘</a><a className="button resume-download" href={resumeHref} download>{resumeLabel}</a></div>
         </div>
         <div className="orbit" aria-hidden="true">
           <span className="orbit-ring orbit-ring-outer"></span>
@@ -549,7 +553,7 @@ export default function Home({ locale }) {
 
     <section id="skills" className="toolkit"><div className="section-title"><span>Инструменты и специализация</span></div><div className="tags">{['Unreal Engine 5','Unity','Blueprint','C#','GAS','Behavior Tree','Blackboard','FSM','Combat Design','AI Design','Progression','Level Design','GDD','Player Journey','Prototyping','Playtests','Jira','Git','Miro'].map(x=><span key={x}>{x}</span>)}</div></section>
 
-    <footer id="contact"><div className="eyebrow">Открыт к предложениям</div><h2>Давайте сделаем игру,<br/><em>в которую хочется играть</em></h2><div className="contact-actions"><span className="button disabled-button" aria-disabled="true">Резюме — по запросу</span><a className="button" href="https://www.linkedin.com/in/ilya-ivanovv/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a className="button" href="https://t.me/IvanovvI" target="_blank" rel="noreferrer">Telegram ↗</a></div><a className="mail" href="mailto:ivanov_nord@mail.ru">ivanov_nord@mail.ru ↗</a><div className="footer-line"><span>Илья Иванов · 2026</span><span>Lead Game Designer / Game Director</span></div></footer>
+    <footer id="contact"><div className="eyebrow">Открыт к предложениям</div><h2>Давайте сделаем игру,<br/><em>в которую хочется играть</em></h2><div className="contact-actions"><a className="button resume-download" href={resumeHref} download>{resumeLabel}</a><a className="button" href="https://www.linkedin.com/in/ilya-ivanovv/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a className="button" href="https://t.me/IvanovvI" target="_blank" rel="noreferrer">Telegram ↗</a></div><a className="mail" href="mailto:ivanov_nord@mail.ru">ivanov_nord@mail.ru ↗</a><div className="footer-line"><span>Илья Иванов · 2026</span><span>Lead Game Designer / Game Director</span></div></footer>
   </main>;
 
   return activeLocale === 'en' ? translateTree(page) : page;

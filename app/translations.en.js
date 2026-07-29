@@ -9,7 +9,6 @@ export const englishTranslations = {
   " Бой, противники, прогрессия и первый пользовательский опыт — от концепции и игровых правил до рабочего билда.": " Combat, enemies, progression, and first-time player experience — from concept and design rules to a playable build.",
   "Смотреть проекты": "View projects",
   "Связаться ↘": "Get in touch ↘",
-  "Резюме — по запросу": "Résumé — available on request",
   "Более 6 лет в разработке": "6+ years in game development",
   "Руководство командами": "Design team leadership",
   "МОЙ ПОДХОД": "MY APPROACH",
