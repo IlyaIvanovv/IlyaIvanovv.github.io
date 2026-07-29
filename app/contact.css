@@ -1,0 +1,6 @@
+.hero h1{font-size:clamp(42px,5.4vw,82px);line-height:1.04;max-width:1250px}
+.hero-copy{max-width:800px}
+.hero-copy strong{color:var(--paper)}
+.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin:36px 0 18px}
+.disabled-button{color:#777b73;border-color:#343831;cursor:not-allowed;user-select:none}
+@media(max-width:560px){.hero h1{font-size:38px}.contact-actions{flex-direction:column}.contact-actions .button{text-align:center}}

@@ -1,0 +1,16 @@
+{
+  "name": "ilya-ivanov-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node dev-sites.mjs",
+    "build": "node build-sites.mjs",
+    "build:github": "node build-github.mjs",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.5.7",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  }
+}
