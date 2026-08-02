@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node dev-sites.mjs",
-    "build": "node build-sites.mjs",
-    "build:github": "node build-github.mjs",
-    "start": "next start"
+  	"dev": "next dev",
+  	"build": "next build",
+  	"build:github": "node build-github.mjs",
+  	"start": "next start"
   },
   "dependencies": {
     "next": "^15.5.7",
